@@ -11,9 +11,9 @@ jobs:
               run: echo "Goodbye"
 
     second-job:
+        needs: premier-job
         name: mon second job
         runs-on: ubuntu-latest
         steps:
             - name: Mon étape
               run: echo "Je suis le second Job"
-              
